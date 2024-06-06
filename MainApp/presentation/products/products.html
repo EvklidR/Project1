@@ -1,0 +1,49 @@
+{% extends "patternForTables.html" %}
+{% block head %}
+    <link href="{{ url_for('static', path='/products/products.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+
+{% block title %}
+Товары
+{% endblock %}
+
+
+{% block options %}
+    <a href="{{ url_for('prod_table') }}" class="selected">Статистика</a>
+    <a href="{{ url_for('abc_table') }}">ABC-анализ</a>
+{% endblock %}
+
+
+{% block nameoftable %}
+Товары
+{% endblock %}
+
+
+{% block headbuttons %}
+    <label for="months">За последние</label>
+    <select name="months" id="months">
+        {% for i in range(1, 13) %}
+        <option value="{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select>
+    <label for="months">месяцев(а)</label>
+    <input class="search" placeholder="Найти по наименованию">
+    <a href="{{ url_for('add_product') }}">
+        <button class="batt">Добавить товар</button>
+    </a>
+{% endblock %}
+
+
+{% block headrow %}
+    <div class="tableElem t0" id="sortByName">Наименование товара</div>
+    <div class="tableElem t1" id="sortBySales">Количество продаж</div>
+    <div class="tableElem t1" id="sortByBuys">Количество поступлений</div>
+    <div class="tableElem t1" id="sortByStock">На складе</div>
+{% endblock %}
+
+
+{% block script %}
+    <script src="{{ url_for('static', path='/products/js.js') }}"></script>
+{% endblock %}

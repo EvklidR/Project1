@@ -1,0 +1,39 @@
+{% extends "operations/patternOperations.html" %}
+{% block head %}
+    <link href="{{ url_for('static', path='/operations/buy/buy.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{% endblock %}
+
+
+{% block title %}
+    Поступления
+{% endblock %}
+
+
+{% block nameoftable %}
+    Поступления
+{% endblock %}
+
+
+{% block headbuttons %}
+        <a href="{{ url_for('add_buy') }}">
+            <button class="batt">Добавить поступление</button>
+        </a>
+
+{% endblock %}
+
+
+{% block headrow %}
+        <div class="tableElem t0">№</div>
+        <div class="tableElem t2">На сумму</div>
+        <div class="tableElem t1">Склад</div>
+        <div class="tableElem t2">Дата</div>
+        <div class="tableElem t0"></div>
+
+{% endblock %}
+
+
+{% block realscript %}
+<script src="{{ url_for('static', path='/operations/buy/js.js') }}"></script>
+{% endblock %}

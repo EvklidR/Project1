@@ -1,0 +1,298 @@
+
+.v13_28 {
+  min-width: 888px;
+}
+
+@media(min-width:888px){
+.tbl {
+    margin-left: 10%;
+}}
+
+.tableElem {
+    background: rgb(44,44,44);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    min-width: 20px;
+    overflow: hidden;
+}
+
+.head .tablerow div{
+    background: none;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+}
+.tableElem a{
+    color: white;
+}
+
+.tbl{
+    margin: auto;
+    margin-top: 100px;
+    width: 83%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.parent{
+    position: relative;
+    align-items: flex-start;
+    top: 50px;
+    display: flex;
+    min-width: 1269px;
+}
+
+.fixed-cell ul li {
+    padding: 5px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.tablerow div, .top div {
+    margin: 6px 4px;
+}
+
+
+.batt {
+    background: rgba(124,75,75,1);
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.parb {
+    text-align: right;
+    padding: 10px 0px;
+}
+.search {
+    height: 33px;
+    border-radius: 6px;
+    padding-left: 5px;
+}
+
+.top {
+    justify-content: space-between;
+}
+.top, .head{
+    display: flex;
+    flex-direction: row;
+}
+.tablerow, .head{
+    width: 100%;
+    display: flex;
+}
+
+.t0{
+    width: 90px;
+}
+.t1 {
+    width: 60%;
+}
+.t2 {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.info {
+    font-size: 13px;
+    padding-top: 22px;
+    padding-left: 10px;
+}
+
+.options {
+    height: 465px;
+    width: 230px;
+    display: flex;
+    padding-left: 60px;
+    flex-direction: column;
+    font-size: 16px;
+    margin-top: 120px;
+    border-right: 1px solid black;
+}
+
+.options a {
+    padding: 5px;
+    padding-bottom: 10px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 3;
+    display: none;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.product-list {
+    padding: 0;
+    list-style-type: none;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-list div:last-child {
+    border-bottom: none;
+}
+
+.product-list div:hover {
+    background-color: #f5f5f5;
+}
+
+.popup-title {
+    margin-top: 0;
+    text-align: center;
+}
+
+.product-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-list::-webkit-scrollbar-track {
+    background: none;
+}
+
+.product-list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.product-list::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.product-list::-webkit-scrollbar-thumb:active {
+    background-color: #333;
+}
+
+.product-attr {
+    width: 34%;
+    text-align: center;
+}
+
+.product-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.products-head div {
+    font-weight: bold;
+    font-size: 16px;
+}
+.tablebody .tablerow {
+    cursor: pointer;
+}
+
+
+.tableElem.actions {
+    display: flex;
+    justify-content: space-around;
+    background: none;
+}
+
+.edit-icon, .delete-icon {
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+.edit-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 3;
+    display: none;
+    width: 415px;
+    border-radius: 5px;
+}
+
+.popup-title {
+    margin-top: 0;
+    font-size: 35px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 20px; /* Увеличен размер текста */
+    margin-bottom: 10px;
+}
+
+.form-input, .form-select {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px; /* Увеличен размер текста */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button-container {
+    text-align: center; /* Центрирование кнопки */
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffa500; /* Оранжевый цвет */
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.button-container button:hover {
+    background-color: #cc8400;
+}
+
+
+.edit-icon, .delete-icon {
+    color: black; /* Черный цвет для иконки редактирования */
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"/>
+    <link href="{{ url_for('static', path='/main.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link id="favicon" rel="icon" type="image/x-icon" href="{{ url_for('static', path='favicon.ico') }}">
+
+    {% block head %} {% endblock %}
+    <title>{% block title %}{% endblock %}</title></head>
+<body>
+<div class="main">
+    <div class="header">
+        <div class="wrap-button">
+            <a href="{{ url_for('login') }}" class="v15_37">Выйти</a>
+        </div>
+        <div class="menu">
+            {% if status %}
+            <div><a href="{{ url_for('users_table') }}" class="usersHead">Сотрудники</a></div>
+            {% endif %}
+            <div><a href="{{ url_for('report') }}" class="reportHead">Отчет</a></div>
+            <div><a href="{{ url_for('sales_table') }}" class="operationsHead">Операциии</a></div>
+            <div><a href="{{ url_for('stores_table') }}" class="storesHead">Склады</a></div>
+            <div><a href="{{ url_for('prod_table') }}" class="prodHead">Товары</a></div>
+            <span class="login">{{ login }}</span>
+            <img class="icon" src="{{ url_for('static', path='images/icon.jpg') }}">
+        </div>
+
+
+
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login V10</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{{ url_for('static', path='/forms/auth/main.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/forms/auth/util.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/main.css') }}" rel="stylesheet">
+
+
+<body>
+
+<div class="limiter">
+    <div class="container-login100">
+        <span class="wrap-login100 p-t-50">
+            <form class="login100-form validate-form flex-sb flex-w">
+                <span class="login100-form-title p-b-51">Авторизация</span>
+                <span class="not-match">Пароль и логин не совпадают</span>
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Требуется имя пользователя">
+                    <input class="input100" type="text" name="username" placeholder="Логин">
+                    <span class="focus-input100"></span>
+                </div>
+
+
+                <div class="wrap-input100 validate-input m-b-16" data-validate="Требуется пароль">
+                    <input class="input100" type="password" name="password" placeholder="Пароль">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-login100-form-btn m-t-17">
+                    <button class="login100-form-btn" type="submit">
+                        Войти
+                    </button>
+                </div>
+            </form>
+            <div class="text-center">
+                <!--                <a href="#" class="txt1">-->
+                <!--                    Забыли пароль?-->
+                <!--                </a>|-->
+                <a href="{{ url_for('for_register') }}" class="txt1">
+                    Еще нет аккаунта?
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="{{ url_for('static', path='forms/main.js') }}"></script>
+<script src="{{ url_for('static', path='forms/auth/logout.js') }}"></script>
+
+</body>
+</html>

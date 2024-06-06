@@ -1,0 +1,46 @@
+{% extends "pattern.html" %}
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="{{ url_for('static', path='forms/formstore/formstore.css') }}" rel="stylesheet">
+
+{% endblock %}
+{% block title %}
+Form
+{% endblock %}
+{% block content %}
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form-store validate-form">
+                <span class="login100-form-title">Добавление склада</span>
+                <div class="form-row name">
+                    <div class="wrap-input100 validate-input" data-validate="Требуется адрес">
+                        <input class="input100" type="text" name="address" placeholder="Адрес склада">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                </div>
+                <div class="form-row">
+
+                    <div style="display: flex; align-items: center;">
+                        <label style="margin-right: 10px;">Тип склада</label>
+                        <select name="type" class="sel">
+                            <option value="Оптовый склад">Оптовый склад</option>
+                            <option value="Розничный магазин">Розничный магазин</option>
+                        </select>
+                    </div>
+                    <span class="focus-input100"></span>
+
+                </div>
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn" type="submit">
+                        Добавить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', path='forms/formstore/js.js') }}"></script>
+{% endblock %}

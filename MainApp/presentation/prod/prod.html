@@ -1,0 +1,79 @@
+{% extends "pattern.html" %}
+{% block head %}
+<link href="{{ url_for('static', path='/prod/prod.css') }}" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+{% endblock %}
+{% block title %}
+Информация
+{% endblock %}
+{% block content %}
+<h1 class="title" id="{{ product.id }}">{{ product.name }}</h1>
+<div class="wrap-head">
+    <div class="period">
+        <label for="months">Брать данные за последние</label>
+        <select name="months" id="months">,
+            {% for i in range(3, 13, 3) %}
+            <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+        <label for="months">месяцев(а)</label>
+    </div>
+    <div class="forecast-container">
+        <button class="forecast-button">Спрогнозировать</button>
+    </div>
+</div>
+<div class="parent inf">
+    <div class="chart-container">
+        <span class="warning" style="color: brown;">Чем больше данных о продажах, тем точнее прогнозы модели. При малом количестве прогнозирование может быть очень неточным!</span>
+
+        <canvas id="salesChart"></canvas>
+    </div>
+
+    <div class="divs">
+        <table class="info" cellspacing="0">
+            <tr>
+                <td>Категория товара в ABC-анализе:</td>
+                <td id="abc_category"></td>
+            </tr>
+            <tr>
+                <td>Суммарная выручка с товара, р:</td>
+                <td id="total_revenue"></td>
+            </tr>
+            <tr>
+                <td>Процент от выручки, %:</td>
+                <td id="revenue_percentage"></td>
+            </tr>
+            <tr>
+                <td>Совокупный процент от выручки, %:</td>
+                <td id="cumulative_revenue_percentage"></td>
+            </tr>
+            <tr>
+                <td>Текущее количество, {{ product.unit.value }}:</td>
+                <td id="current_quantity"></td>
+            </tr>
+            <tr>
+                <td>Средняя цена продаж, р:</td>
+                <td id="average_sale_price"></td>
+            </tr>
+            <tr>
+                <td>Средняя цена закупок, р:</td>
+                <td id="average_buy_price"></td>
+            </tr>
+            <tr>
+                <td>Товарооборачиваемость, раз:</td>
+                <td id="turnover"></td>
+            </tr>
+        </table>
+
+    </div>
+    </br>
+    <div class="divt">
+        <button class="del">Удалить товар</button>
+        <button class="update">Изменить параметры товара</button>
+    </div>
+</div>
+<div class="warningNone" style="display: none;"></div>
+
+<script src="{{ url_for('static', path='/prod/js.js') }}"></script>
+{% endblock %}

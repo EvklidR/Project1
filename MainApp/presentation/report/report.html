@@ -1,0 +1,72 @@
+{% extends "pattern.html" %}
+{% block head %}
+<link href="{{ url_for('static', path='/report/report.css') }}" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+{% endblock %}
+{% block title %}
+Информация о компании
+{% endblock %}
+{% block content %}
+<div id="wrapper">
+    <div id="Head">
+        <h1 class="title"></h1>
+            <button id="downloadPdfButton">Скачать PDF</button>
+    </div>
+    <div class="period">
+        <label for="months">Брать данные за последние</label>
+        <select name="months" id="months">,
+            {% for i in range(3, 13, 3) %}
+            <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+        <label for="months">месяцев(а)</label>
+        <div id="current-date"></div>
+
+    </div>
+    <div class="parent inf">
+        <div class="chart-container">
+            <canvas id="revenueChart"></canvas>
+        </div>
+        <div class="divs">
+            <table class="info" cellspacing="0" id="companyInfo">
+                <tr>
+                    <td>Общая выручка:</td>
+                    <td id="totalRevenue"></td>
+                </tr>
+                <tr>
+                    <td>Общие продажи:</td>
+                    <td id="totalSales"></td>
+                </tr>
+                <tr>
+                    <td>Общие покупки:</td>
+                    <td id="totalBuys"></td>
+                </tr>
+                <tr>
+                    <td>Общие возвраты:</td>
+                    <td id="totalReturns"></td>
+                </tr>
+                <tr>
+                    <td>Всего товаров:</td>
+                    <td id="totalProducts"></td>
+                </tr>
+                <tr>
+                    <td>Всего складов:</td>
+                    <td id="totalStores"></td>
+                </tr>
+                <tr>
+                    <td>Всего сотрудников:</td>
+                    <td id="totalEmployees"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js">
+import { jsPDF } from "jspdf";
+</script>
+<script src="{{ url_for('static', path='/report/js.js') }}"></script>
+{% endblock %}

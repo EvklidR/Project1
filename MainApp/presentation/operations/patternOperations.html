@@ -1,0 +1,39 @@
+{% extends "patternForTables.html" %}
+
+{% block head %}
+{% endblock %}
+
+
+{% block title %}
+{% endblock %}
+
+
+{% block nameoftable %}
+{% endblock %}
+
+
+{% block options %}
+        <a href="{{ url_for('sales_table') }}">Продажи</a>
+        <a href="{{ url_for('buy_table') }}">Поступления</a>
+        <a href="{{ url_for('displacement_table') }}">Перемещения</a>
+        <a href="{{ url_for('return_table') }}">Возвраты</a>
+{% endblock %}
+
+{% block headbuttons %}
+{% endblock %}
+
+
+{% block headrow %}
+{% endblock %}
+
+
+{% block script %}
+<div class="overlay"></div>
+
+<div class="popup">
+    <h2 class="popup-title">Информация</h2>
+    <ul class="product-list"></ul>
+</div>
+{% block realscript %}{% endblock %}
+
+{% endblock %}

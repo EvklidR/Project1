@@ -1,0 +1,92 @@
+{% extends "pattern.html" %}
+{% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="{{ url_for('static', path='forms/main.js') }}"></script>
+<link href="{{ url_for('static', path='forms/formupdateproduct/form.css') }}" rel="stylesheet">
+{% endblock %}
+{% block title %}
+Form
+{% endblock %}
+{% block content %}
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form-product validate-form">
+                <span class="login100-form-title" data="{{ product.id }}">Редактирование товара</span>
+                <div class="wrap-input10">
+                    <label style="margin-right: 10px; margin-bottom: 10px;">Наименование товара</label>
+                    <div class="wrap-input100 validate-input" data-validate="Требуется название">
+                        <input class="input100 name-product" type="text" name="nameprod"
+                               placeholder="Наименование товара" value="{{ product.name }}">
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+
+                <div class="wrap-input10 validate-input">
+                    <div style="display: flex; align-items: center;">
+                        <label style="margin-right: 10px;">Срок годности</label>
+                        <input class="input-cost input100" type="number" name="expiry" value="{{ product.data_licvid }}">
+                        <select name="period" class="sel">
+                            <option value="1">дней</option>
+                            <option value="2">месяцев</option>
+                            <option value="3">лет</option>
+                        </select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="form-row">
+
+                    <div class="wrap-input10 validate-input">
+                        <div style="display: flex; align-items: center;">
+                            <label style="margin-right: 10px;">Группа товаров</label>
+                            <input class="input100 input-group" name="group" placeholder="Выберите группу"
+                                   id="{{ product.type }}" disabled>
+                            <div class="select-button">Выбрать</div>
+                        </div>
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input10 validate-input">
+                        <div style="display: flex; align-items: center;">
+                            <label style="margin-right: 10px;">Единица измерения</label>
+                            <select name="unit" class="sel">
+                                <option value="шт">шт</option>
+                                <option value="л">л</option>
+                                <option value="кг">кг</option>
+                                <option value="м">м</option>
+                            </select>
+                        </div>
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+
+                <div class="container-login100-form-btn">
+                    <button class="login100-form-btn">
+                        Сохранить
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Overlay и всплывающее окно -->
+<div class="overlay"></div>
+
+<div class="popup">
+    <h2 class="popup-title">Выбор группы</h2>
+    <ul></ul>
+    <div class="add-group">
+        <i class="fa fa-plus add-icon disabled" aria-hidden="true"></i>
+        <input type="text" class="group-input" placeholder="Введите название группы">
+    </div>
+    <span class="alert">Такая группа уже существует</span>
+    <div class="button-container">
+        <button class="choose-button disabled">Выбрать</button>
+    </div>
+</div>
+<script src="{{ url_for('static', path='forms/formupdateproduct/js.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "pattern.html" %}
+
+{% block head %}{% endblock %}
+{% block title %}{% endblock %}
+
+{% block content %}
+
+
+<div class="parent">
+
+
+    <div class="options">
+
+{% block options %}{% endblock %}
+
+    </div>
+    <div class="tbl">
+
+        <div style="width: inherit;">
+            <div class="top">
+
+                <div class="title">{% block nameoftable %}{% endblock %}</div>
+                <div class="parb">
+                {% block headbuttons %}{% endblock %}
+                </div>
+            </div>
+            <div class="head">
+                <div class="tablerow">
+{% block headrow %}{% endblock %}
+                </div>
+            </div>
+
+            <div class="tablebody">
+                <!-- Строки таблицы будут заполняться динамически -->
+            </div>
+        </div>
+    </div>
+</div>
+{% block script %}{% endblock %}
+
+{% endblock %}

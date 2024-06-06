@@ -1,0 +1,451 @@
+
+.limiter a{
+    font-size:14px;
+    line-height:1.7;
+    color:#666;
+    margin:0;
+    transition:all .4s;
+}
+
+.limiter a:focus{outline:none!important}
+
+.limiter a:hover{text-decoration:none;color:#403838}
+
+h1,h2,h3,h4,h5,h6{margin:0}
+
+p{
+    font-size:14px;
+    line-height:1.7;
+    color:#666;
+    margin:0
+}
+
+ul,li{
+    margin:0;
+    list-style-type:none;
+}
+
+.login100-form-btn {
+    font-family: Ubuntu-Bold;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+    height: 62px;
+    background-color: rgba(44, 44, 44, 1);
+    border-radius: 3px;
+    transition: all .4s;
+}
+
+input{outline:none;border:none}
+textarea{outline:none;border:none}
+textarea:focus,input:focus{border-color:transparent!important}
+input::-webkit-input-placeholder{color:#8f8fa1}
+input:-moz-placeholder{color:#8f8fa1}
+input::-moz-placeholder{color:#8f8fa1}
+input:-ms-input-placeholder{color:#8f8fa1}
+textarea::-webkit-input-placeholder{color:#8f8fa1}
+textarea:-moz-placeholder{color:#8f8fa1}
+textarea::-moz-placeholder{color:#8f8fa1}
+textarea:-ms-input-placeholder{color:#8f8fa1}
+label{display:block;margin:0}
+button{outline:none!important;border:none;background:0 0}
+button:hover{cursor:pointer}
+iframe{border:none!important}
+
+.txt1{
+    font-size:16px;
+    color: #403838;
+    line-height:3.4
+}
+
+.limiter{width:100%;margin:0 auto}
+
+.container-login100{
+    width:100%;
+    min-width: 820px;
+    min-height:100vh;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.wrap-login100{
+    width:400px;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login100-form{
+    width:100%
+}
+
+.login100-form-title{
+    padding-bottom: 51px;
+    font-size:30px;
+    color:#403838;
+    line-height:1.2;
+    text-transform:uppercase;
+    text-align:center;
+    width:100%;
+    display:block;
+}
+
+.wrap-input100{
+    margin-bottom: 16px;
+    width:100%;
+    position:relative;
+    background-color:#e6e6e6;
+    border:1px solid transparent;
+    border-radius:3px;
+}
+
+.name-product{
+    color:#403838;
+    line-height:1.2;
+    font-size:18px;
+    display:block;
+    width:100%;
+    background:0 0;
+    height:50px;
+    padding:0 15px 0 15px
+}
+
+.focus-input100{
+    position:absolute;
+    display:block;
+    width:calc(100% + 2px);
+    height:calc(100% + 2px);
+    top:-1px;
+    left:-1px;
+    pointer-events:none;
+    border:1px solid #403838;
+    border-radius:3px;
+    visibility:hidden;
+    opacity:0;
+    transition:all .4s;
+    transform:scaleX(1.1) scaleY(1.3)
+}
+
+.input100:focus+.focus-input100{
+    visibility:visible;
+    opacity:1;
+    transform:scale(1)
+}
+.eff-focus-selection{
+    visibility:visible;
+    opacity:1;
+    transform:scale(1)
+}
+
+.input-checkbox100{display:none}
+
+.label-checkbox100{
+
+    font-size:16px;
+    color:#403838;
+    line-height:1.2;
+    display:block;
+    position:relative;
+    padding-left:26px;
+    cursor:pointer
+}
+
+.input-checkbox100:checked+.label-checkbox100::before{
+    color: rgba(124,75,75,1);
+}
+
+.container-login100-form-btn{
+    width:100%;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+    flex-wrap:wrap;
+    margin-top: 17px;
+}
+
+.login100-form-btn{
+
+    font-size:16px;
+    color:#fff;
+    line-height:1.2;
+    text-transform:uppercase;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 20px;
+    width:100%;
+    height:62px;
+    background-color: rgba(44,44,44,1);
+    border-radius:3px;
+    transition:all .4s;
+    margin: 0px 150px;
+}
+
+.login100-form-btn:hover{
+    background-color: rgba(124,75,75,1);
+}
+
+.validate-input{position:relative}
+/*
+.alert-validate::before{
+    content:attr(data-validate);
+    position:absolute;
+    max-width:70%;
+
+    border:1px solid #c80000;
+    border-radius:3px;
+    padding:4px 25px 5px 10px;
+    top:50%;
+    transform:translateY(-50%);
+    right:12px;
+    pointer-events:none;
+    color:#c80000;
+    font-size:14px;
+    line-height:1.4;
+    text-align:left;
+    visibility:hidden;
+    opacity:0;
+    transition:opacity .4s
+}
+*/
+
+.alert-validate::after {
+    content: "\f12a";
+    font-family: FontAwesome;
+    display: block;
+    position: absolute;
+    color: #c80000;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -18px
+}
+
+.wrap-input10 {
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.sel {
+    height: 30px;
+    background: unset;
+    border: none;
+    text-align: center;
+}
+.input-cost {
+    width: 60px;
+    background: none;
+    border: 1px solid #505050;
+    border-radius: 3px;
+    margin-right: 10px;
+    height: 30px;
+    padding: 5px;
+    -moz-appearance: textfield;
+}
+
+.input-cost:focus, .input-group:focus{
+    border: 1px solid black !important;
+    border-radius: 3px;
+}
+
+.input-cost::-webkit-inner-spin-button,
+.input-cost::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    z-index: 3;
+    display: none;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.select-button{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.input-group {
+    min-width: 20px;
+    width: fit-content;
+    border-radius: 3px;
+    margin-right: 10px;
+    background: none;
+    height: 5px;
+    padding: 14px;
+    border: 1px solid #505050;
+    border-radius: 3px;
+    cursor: auto;
+    color: black;
+}
+
+.input-group::placeholder {
+    color: #505050;
+}
+
+
+.group-input {
+    border: 1px solid #505050;
+    height: 25px;
+    border-radius: 3px;
+}
+
+.visible{
+    display: inline;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button-container button {
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: orange; /* Устанавливаем оранжевый цвет для кнопок */
+}
+
+.popup ul li.selected {
+    background-color: #e0e0e0;
+}
+
+.choose-button:disabled {
+  pointer-events: none;
+  border-color: #ccc;
+  opacity: 0.6;
+
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: default;
+}
+
+.add-icon {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.popup ul {
+    padding: 0; /* Убираем отступы внутри списка */
+    list-style-type: none; /* Убираем маркеры списка */
+    margin-top: 10px; /* Добавляем отступ сверху */
+    border: 1px solid black; /* Добавляем рамку */
+    border-radius: 5px; /* Делаем скругленные края рамки */
+    max-height: 300px; /* Устанавливаем максимальную высоту списка */
+    overflow-y: auto; /* Добавляем прокрутку при превышении высоты */
+}
+
+.popup ul li {
+    padding: 10px; /* Добавляем отступы внутри элементов списка */
+    border-bottom: 1px solid #ccc; /* Добавляем линию между элементами списка */
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup ul li:last-child {
+    border-bottom: none; /* Убираем линию у последнего элемента списка */
+}
+
+.popup-title {
+    margin-top: 0; /* Убираем отступ сверху */
+}
+
+.button-container button.choose-button {
+    margin-right: 10px; /* Добавляем отступ между кнопками */
+}
+
+.popup ul::-webkit-scrollbar {
+    width: 8px; /* Устанавливаем ширину скроллбара */
+}
+
+.popup ul::-webkit-scrollbar-track {
+    background: none; /* Убираем фон скроллбара */
+}
+
+.popup ul::-webkit-scrollbar-thumb {
+    background-color: #888; /* Устанавливаем цвет ползунка скроллбара */
+    border-radius: 4px; /* Делаем скругленные края ползунка */
+}
+
+.popup ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Устанавливаем цвет ползунка при наведении */
+}
+
+.popup ul::-webkit-scrollbar-thumb:active {
+    background-color: #333; /* Устанавливаем цвет ползунка при активном состоянии */
+}
+
+.add-group {
+    margin-top: 10px;
+}
+
+.delete-icon, .group-name {
+    cursor: pointer;
+}
+
+.alert{
+    display: none;
+    color: red;
+    font-size: 14px;
+}
+
+.flatpickr-calendar {
+    font-family: sans-serif;
+}
+
+.flatpickr-input {
+    cursor:pointer;
+}
+
+.wrapper-error {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.error-message {
+    color: red;
+}
+
+.edit-icon, .save-icon {
+    margin-right: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+{% extends "operations/patternOperations.html" %}
+{% block head %}
+    <link href="{{ url_for('static', path='/operations/return/return.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+{% endblock %}
+
+
+{% block title %}
+    Возвраты
+{% endblock %}
+
+
+{% block nameoftable %}
+    Возвраты
+{% endblock %}
+
+
+{% block headbuttons %}
+<label for="sort">Со статусом:</label>
+    <select id="sort">
+        <option value="">Все</option>
+        <option value="Подана заявка">Подана заявка</option>
+        <option value="Заявка отклонена">Заявка отклонена</option>
+        <option value="Заявка одобрена">Заявка одобрена</option>
+        <option value="Товар возвращен">Товар возвращен</option>
+    </select>
+{% endblock %}
+
+
+{% block headrow %}
+        <div class="tableElem t1">Товар</div>
+        <div class="tableElem t1">На склад</div>
+        <div class="tableElem t2">По цене</div>
+        <div class="tableElem t2">В количестве</div>
+        <div class="tableElem t2">Номер продажи</div>
+        <div class="tableElem t1">Статус</div>
+        <div class="tableElem t2">Дата изменения статуса</div>
+        <div class="tableElem t0"></div>
+
+{% endblock %}
+
+
+{% block realscript %}
+<script src="{{ url_for('static', path='/operations/return/js.js') }}"></script>
+{% endblock %}

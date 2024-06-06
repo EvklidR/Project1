@@ -1,0 +1,129 @@
+
+
+body {
+  font-size: 14px;
+  margin: 0;
+}
+
+a {
+    text-decoration: none; /* Отключение подчеркивания */
+    color: black; /* Изменение цвета текста ссылок */
+}
+a:hover {
+    cursor: pointer; /* Изменение стиля курсора при наведении */
+}
+
+.selected {
+    color: rgba(124,75,75,1) !important;
+}
+
+#downloadPdfButton{
+    padding: 3px 10px;
+    margin: 12px;
+    margin-left: 30px;
+}
+
+#Head {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media(max-width:1267px){
+.main {
+    overflow-x: scroll !important;
+}}
+
+.main {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,1), rgba(85,85,85, 1));
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+.header {
+  width: 100%;
+  min-width: 900px;
+  height: 82px;
+  background: rgba(10,10,10, 0.8);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  width: 49px;
+  height: 49px;
+  border: 1px solid rgba(255,255,255,1);
+  border-radius: 10px;
+}
+
+.login {
+  color: rgba(255,255,255,1);
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 16px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+
+
+.prodHead:hover, .storesHead:hover, .operationsHead:hover, .reportHead:hover, .usersHead:hover {
+    color: rgba(124,75,75,1);
+}
+
+.prodHead, .storesHead, .operationsHead, .reportHead, .usersHead{
+    color: rgba(255,255,255,1);
+    font-family: Inter;
+    font-weight: Bold;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    right: 20px;
+}
+
+.wrap-button {
+  width: 94px;
+  height: 39px;
+  border-radius: 10px;
+  background: rgba(150,100,90,1);
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 46px;
+  position: relative;
+}
+
+
+.v15_37 {
+  width: 68px;
+  color: rgba(0,0,0,1);
+  top: 7px;
+  left: 12px;
+  font-family: Inter;
+  font-weight: Bold;
+  font-size: 21px;
+  text-align: center;
+}
